@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html>		<!-- Indicates the beginning of the HTML code -->
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+		<title> Question #3 </title>
+		<script type="text/javascript" src="https://www.cs.unm.edu/~angel/BOOK/INTERACTIVE_COMPUTER_GRAPHICS/SEVENTH_EDITION/CODE/Common/MV.js"></script> 				<!-- For matrix/vector manipulation; Convenience -->
+		<script type="text/javascript" src="./map.js"></script>
+
+	</head>
+
+
+
+	<body>
+	<script type="text/javascript">
+
+	P = vec2(0,0), Q = vec2(1,1), A = 0 , B = 10, X = vec2(0.5, 0.5); 
+	console.log(map_point(P,Q,X,A,B));  // 5
+
+	P = vec2(0,0), Q = vec2(100,100), A = 0 , B = 10, X = vec2(0.2, 0.7); 
+	console.log(map_point(P,Q,X,A,B));  // 0.05147815070493499
+
+	P = 0, Q = 100, A = 0 , B = 10, X = 15; 
+	console.log(map_point(P,Q,X,A,B));  // 1.5
+
+	P = 0, Q = 100, A = vec2(0, 5) , B = vec2(10, 10), X = 15; 
+	console.log(map_point(P,Q,X,A,B));  // [ 1.5, 5.75 ]
+
+	P = 0, Q = 100, A = vec2(0, 5) , B = vec2(10, 10), X = 100; 
+	console.log(map_point(P,Q,X,A,B));  // [ 10, 10 ]
+
+	P = vec2(0,0), Q = vec2(100,100), A = vec2(0, 5) , B = vec2(10, 10), X = vec2(20, 20); 
+	console.log(map_point(P,Q,X,A,B));  // [ 2, 6 ]
+
+	P = vec2(0,5), Q = vec2(10,25), A = vec2(0, 5) , B = vec2(10, 10), X = vec2(3, 11); 
+	console.log(map_point(P,Q,X,A,B));  // [ 3, 6.5 ]
+
+	P = vec2(0,5), Q = vec2(10,25), A = 5 , B = 10, X = vec2(3, 11); 
+	console.log(map_point(P,Q,X,A,B));  // 6.5
+
+	P = vec3(0,0,0), Q = vec3(10,10,10), A = 0 , B = 10, X = vec3(3, 3, 3); 
+	console.log(map_point(P,Q,X,A,B));  // 3
+
+	P = vec3(0,0,0), Q = vec3(10,10,10), A = vec2(0,0) , B = vec2(10,10), X = vec3(3, 3, 3); 
+	console.log(map_point(P,Q,X,A,B));  // [3, 3]
+
+	P = vec3(0,0,0), Q = vec3(10,0,0), A = vec2(0,0) , B = vec2(10,10), X = vec3(7, 0, 0); 
+	console.log(map_point(P,Q,X,A,B));  // [7, 7]	
+
+</script>
+		<p> This page serves as the solution for Question # 3 of the Computer Graphics assignment </p>
+		<button onclick=location.reload()>Click me to start again</button>
+
+	</body>
+</html>
